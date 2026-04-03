@@ -5,8 +5,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
     <div class="ProjInfo">
-        <h1>About Xero</h1>
-        <p>Xero is a turn-based RPG game that is meant to </p>
+        <h1>The Xero Project</h1>
+        <p>Xero is a turn-based RPG game made for the PlayStation Vita platform</p>
+        <a href="AboutXero.aspx" class="link">Read More</a>
+        <br/>
+        <a href="https://github.com/SeaCreature-Studio/Xero" class="link">Download for PlayStation Vita (.VPK)</a>
     </div>
 </asp:Content>
 

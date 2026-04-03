@@ -17,17 +17,24 @@ header {
     display: flex;
 }
 
+.Content2 {
+    background-color: #276CE4
+}
 
-
+.link {
+    text-align: center;
+    accent-color: auto;
+}
 .main_nav {
-    background-color: darkcyan;
+    /*background-image: url("Images/SELECT.png");*/
+    background-color: #3AAFB9;
     min-height: 30px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
     .main_nav a {
-        text-decoration: none;
+        text-decoration: url("Images/SELECT.png");
         font-size: 24px;
         color: darkblue;
         margin: 10px;
@@ -35,7 +42,7 @@ header {
 
 
 .center {
-    background-color: lime;
+    background-color: #3AAFB9;
     margin-bottom: 5px;
     display: flex;
 }
@@ -45,7 +52,7 @@ main, aside {
 }
 
 main {
-    background-color: darkblue;
+    background-color: #3AAFB9;
     flex: 4;
     color: white;
     padding: 5px 10px;
