@@ -5,6 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
+    <img src="Images/XERO-LOGO.png" alt="Xero Logo" id="Logo" />
     <div class="Combat">
         <h1>Combat</h1>
         <p>Xero's combat revolves aound the dual-action turn based combat system</p>

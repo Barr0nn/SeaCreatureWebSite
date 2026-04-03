@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
     <header>
 		<section class="header_top">				
-				
+				 <img src="Images/Logo-Placeholder.png" alt="Logo" id="Studio-Logo" />
 		</section>
 			
 		<!-- <nav class="main_nav">   	
