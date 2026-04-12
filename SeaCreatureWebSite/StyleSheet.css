@@ -7,8 +7,25 @@ header, .center, footer {
     border: 2px solid blue;
 }
 
+.header_date {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#DateLabel {
+    flex: 1;
+}
+
+#DayImage {
+    flex: 3;
+    max-width: 60px;
+    height: auto;
+}
+
+
 header {
-    background-color: white;
+    background-color: #276CE4;
     margin-bottom: 5px;
 }
 
@@ -26,8 +43,8 @@ header {
     accent-color: auto;
 }
 .main_nav {
-    /*background-image: url("Images/SELECT.png");*/
-    background-color: #3AAFB9;
+    background-image: url("Images/SELECT.png");
+    background-color: #276CE4;
     min-height: 30px;
     padding-left: 100px;
     padding-right: 100px;
@@ -42,7 +59,7 @@ header {
 
 
 .center {
-    background-color: #3AAFB9;
+    background-color: #276CE4;
     margin-bottom: 5px;
     display: flex;
 }
@@ -52,7 +69,7 @@ main, aside {
 }
 
 main {
-    background-color: #3AAFB9;
+    background-color: #276CE4;
     flex: 4;
     color: white;
     padding: 5px 10px;
@@ -60,12 +77,12 @@ main {
 
 
 aside {
-    background-color: gray;
+    background-color: #276CE4;
     flex: 1;
     padding: 5px;
     text-align: center;
 }
 
 footer {
-    background-color: orange;
+    background-color: #276CE4;
 }

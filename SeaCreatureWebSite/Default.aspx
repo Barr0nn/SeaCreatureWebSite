@@ -11,7 +11,7 @@
 
         <h2>Current projects</h2>
         <ul>
-            <li>Xero</li>
+            <li><a href="XeroProj.aspx">Xero</a></li>
         </ul>
     </div>
 </asp:Content>

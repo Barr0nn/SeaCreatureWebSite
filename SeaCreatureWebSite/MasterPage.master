@@ -11,16 +11,16 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    
     <header>
+		<section class="header_date">
+			<asp:Label ID="DateLabel" runat="server"></asp:Label>
+			<asp:Image ID="DayImage" runat="server"/>
+		</section>
+
 		<section class="header_top">				
 				 <img src="Images/Logo-Placeholder.png" alt="Logo" id="Studio-Logo" />
 		</section>
-			
-		<!-- <nav class="main_nav">   	
-			<a href="Default.aspx">About SeaCreature</a>
-			<a href="XeroProj.aspx">The Xero Project</a>				
-		</nav> -->
 	</header>
 		
 	<section class="center">
@@ -38,7 +38,7 @@
 	</section>
 			
 	<footer>
-			תוכן אזור תחתון
+			 SeaCreature, 2026
 	</footer>
     </form>
 	<asp:ContentPlaceHolder id="ContentPlaceHolderScript" runat="server">
