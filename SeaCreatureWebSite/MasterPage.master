@@ -19,15 +19,15 @@
 		</section>
 
 		<section class="header_top">				
-				 <img src="Images/Logo-Placeholder.png" alt="Logo" id="Studio-Logo" />
+				 <img src="Images/Logo-Placeholder.png" alt="Logo" id="Icon" />
 		</section>
 	</header>
 		
 	<section class="center">
 		<aside>
 				<nav class="main_nav">   	
-	              <a href="Default.aspx">About SeaCreature</a>
-	              <a href="XeroProj.aspx">The Xero Project</a>				
+	              <button class="Navbar" onclick="window.location.href='../default.aspx'"><a href="Default.aspx">About SeaCreature</a></button>
+	              <button class="Navbar" onclick="window.location.href='../XeroProj.aspx'"><a href="XeroProj.aspx">The Xero Project</a></button>				
                 </nav>
 		</aside>
 			
@@ -38,7 +38,11 @@
 	</section>
 			
 	<footer>
-			 SeaCreature, 2026
+			© SeaCreature, 2026
+		<h2>Contact us</h2>
+		<p>Contact email : sea.creature.studio@gmail.com</p>
+		<img src="images/DISCORD_ICON.png" id="Discord"/> <a href="https://discord.gg/6VdaeDvjZW">SeaCreature discord server</a>
+		</p>
 	</footer>
     </form>
 	<asp:ContentPlaceHolder id="ContentPlaceHolderScript" runat="server">

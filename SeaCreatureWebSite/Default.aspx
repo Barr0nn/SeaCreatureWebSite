@@ -7,9 +7,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
     <div class="AboutPage">
       <h1>About SeaCreature</h1>
-      <p>SeaCreature Studio is a newly formed indie game dev studio</p>
-
-        <h2>Current projects</h2>
+      <p>Studio SeaCreature is an indie game studio formed in 2025</p>
+      <h1>The studio members : </h1>
+        <h2>Bar Native</h2>
+        <p>Bar is a lead game director / programmer. His current projects include Xero</p>
+        <h2>Our projects</h2>
         <ul>
             <li><a href="XeroProj.aspx">Xero</a></li>
         </ul>

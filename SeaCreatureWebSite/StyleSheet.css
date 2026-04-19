@@ -1,10 +1,37 @@
-﻿html {
+:root {
+    --ocean-midnight: #03045e;
+    --ocean-deep:     #0a2342;
+    --ocean-navy:     #023e8a;
+    --ocean-blue:     #0077b6;
+    --ocean-cerulean: #0096c7;
+    --ocean-surface:  #00b4d8;
+    --ocean-shallow:  #48cae4;
+    --ocean-glass:    #90e0ef;
+    --ocean-foam:     #ade8f4;
+    --ocean-mist:     #caf0f8;
+}
+
+html {
     direction: ltr;
+}
+
+.Navbar {
+    border-radius: 10px;
+    background-color: #0077b6;
+    border-width: 0px;
+    button-align: left;
+}
+
+#Icon {
+    max-width: 110px;
+}
+
+#Discord {
+    max-width: 20px;
 }
 
 header, .center, footer {
     min-height: 80px;
-    border: 2px solid blue;
 }
 
 .header_date {
@@ -15,6 +42,7 @@ header, .center, footer {
 
 #DateLabel {
     flex: 1;
+    color: var(--ocean-mist);
 }
 
 #DayImage {
@@ -23,9 +51,8 @@ header, .center, footer {
     height: auto;
 }
 
-
 header {
-    background-color: #276CE4;
+    background-color: var(--ocean-deep);
     margin-bottom: 5px;
 }
 
@@ -35,31 +62,39 @@ header {
 }
 
 .Content2 {
-    background-color: #276CE4
+    background-color: var(--ocean-blue);
 }
 
 .link {
     text-align: center;
-    accent-color: auto;
+    accent-color: var(--ocean-surface);
+    color: var(--ocean-shallow);
 }
+
+.link:hover {
+    color: var(--ocean-foam);
+}
+
 .main_nav {
-    background-image: url("Images/SELECT.png");
-    background-color: #276CE4;
+    background-color: var(--ocean-navy);
     min-height: 30px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
     .main_nav a {
-        text-decoration: url("Images/SELECT.png");
+        text-decoration: none;
         font-size: 24px;
-        color: darkblue;
+        color: var(--ocean-shallow);
         margin: 10px;
     }
 
+    .main_nav a:hover {
+        color: var(--ocean-foam);
+    }
 
 .center {
-    background-color: #276CE4;
+    background-color: var(--ocean-deep);
     margin-bottom: 5px;
     display: flex;
 }
@@ -69,20 +104,76 @@ main, aside {
 }
 
 main {
-    background-color: #276CE4;
+    background-color: var(--ocean-blue);
     flex: 4;
-    color: white;
+    color: var(--ocean-mist);
     padding: 5px 10px;
 }
 
+main h1, main h2, main h3 {
+    color: var(--ocean-foam);
+}
+
+main a {
+    color: var(--ocean-shallow);
+}
+
+main a:hover {
+    color: var(--ocean-foam);
+}
+
+main ul {
+    padding-left: 1.5em;
+}
 
 aside {
-    background-color: #276CE4;
+    background-color: var(--ocean-navy);
     flex: 1;
-    padding: 5px;
-    text-align: center;
+    padding: 10px;
+    text-align: left;
 }
 
 footer {
-    background-color: #276CE4;
+    background-color: var(--ocean-midnight);
+    color: var(--ocean-glass);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Login form */
+.login-form label {
+    color: var(--ocean-mist);
+    font-size: 16px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    background-color: var(--ocean-deep);
+    border: 1px solid var(--ocean-cerulean);
+    color: var(--ocean-mist);
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    outline: none;
+    border-color: var(--ocean-shallow);
+}
+
+.login-form input[type="submit"] {
+    background-color: var(--ocean-surface);
+    color: var(--ocean-midnight);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: var(--ocean-shallow);
 }
