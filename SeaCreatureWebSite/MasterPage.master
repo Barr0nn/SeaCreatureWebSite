@@ -20,6 +20,7 @@
 
 		<section class="header_top">				
 				 <img src="Images/Logo-Placeholder.png" alt="Logo" id="Icon" />
+			<a class="login_logout" ID="LoginLogout" runat="server"></a>
 		</section>
 	</header>
 		

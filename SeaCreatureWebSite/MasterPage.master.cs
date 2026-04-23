@@ -9,6 +9,17 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if ((bool)Session["isLoggedIn"])
+        {
+            LoginLogout.HRef = "Logout.aspx";
+            LoginLogout.InnerText = "Hello, " + Session["userName"] + "(Log Out)";
+        }
+        else
+        {
+            LoginLogout.HRef = "Login.aspx";
+            LoginLogout.InnerText = "Log in";
+        }
+
         if (!IsPostBack)
         {
             

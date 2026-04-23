@@ -17,14 +17,14 @@
     void Application_Error(object sender, EventArgs e)
     {
         // Code that runs when an unhandled error occurs
-        Session["UserName"] = "";
-        Session["isLoggedIn"] = false;
+        
     }
 
     void Session_Start(object sender, EventArgs e)
     {
         // Code that runs when a new session is started
-
+        Session["UserName"] = "";
+        Session["isLoggedIn"] = false;
     }
 
     void Session_End(object sender, EventArgs e)

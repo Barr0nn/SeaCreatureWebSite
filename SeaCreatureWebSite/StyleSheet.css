@@ -82,6 +82,12 @@ header {
     padding-right: 100px;
 }
 
+    .main_nav .login_logout {
+        margin-right: auto;
+        border: 1px solid black;
+        padding: 5px;
+    }
+
     .main_nav a {
         text-decoration: none;
         font-size: 24px;
@@ -140,7 +146,7 @@ footer {
     text-align: center;
 }
 
-/* Login form */
+
 .login-form label {
     color: var(--ocean-mist);
     font-size: 16px;

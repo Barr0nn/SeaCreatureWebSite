@@ -4,13 +4,16 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
-    <div class="login-form">
-        <label for="userName">שם משתמש:</label><br>
-        <input type="text" id="userName" name="userName"><br>
-        <label for="password">סיסמה:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit" value="Submit">
-    </div>
+   <form runat="server" method="post" action="Login.aspx">
+    <label for="userName">Username:</label><br>
+    <input type="text" id="userName" name="userName"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Submit">
+</form>
+<div runat="server" id="LoginResult"></div>
+
+
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScript" Runat="Server">
