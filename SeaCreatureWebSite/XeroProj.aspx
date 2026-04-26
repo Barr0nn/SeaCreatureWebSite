@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
     <div class="ProjInfo">
         <img src="Images/XERO-LOGO.png" alt="Xero Logo" id="Logo" />
-        <p>Xero is a turn-based RPG game made for the PlayStation Vita platform</p>
+        <p>Xero is an action-based RPG game made for the PlayStation Vita platform</p>
         <a href="AboutXero.aspx" class="link">Read More</a>
         <br/>
         <a href="https://github.com/SeaCreature-Studio/Xero" class="link">Download for PlayStation Vita (.VPK)</a>
