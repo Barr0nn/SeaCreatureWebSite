@@ -14,6 +14,14 @@
 </form>
 <div runat="server" id="LoginResult"></div>
 
+    <br><br>
+
+<form method="get" action="Register.aspx">		
+    <input type="submit" value="להרשמה"/>
+</form>
+
+
+
 
 </asp:Content>
 
