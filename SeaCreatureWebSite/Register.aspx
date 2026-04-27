@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
-    <form runat="server" action="Registration.aspx" method="post">		
+    <form runat="server" action="Register.aspx" method="post">		
 
 	<label for="firstName">שם פרטי:</label><br>
 	<input runat="server" type="text" id="firstName" name="firstName"/><br/>
