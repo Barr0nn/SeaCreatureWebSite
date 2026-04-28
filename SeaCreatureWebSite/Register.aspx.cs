@@ -123,46 +123,75 @@ public partial class Register : System.Web.UI.Page
 
     private bool ID_Validation()
     {
-        // === משימה לתלמיד: וידוא תעודת זהות ===
-        // 1. ודא שאורך תעודת הזהות הוא בדיוק 9 תווים
-        // 2. ודא שכל התווים במחרוזת הם ספרות בלבד
-        // כדי לעבור על כל התווים, תוכל להיעזר בלולאה שמופיעה בפעולה:
-        // Password_Validation
-        // 3. אם יש שגיאה, אל תשכח להוסיף הודעה אל:
-        // RegistrationResult.InnerText
-        // ולהחזיר:
-        // return false;
+        string id = idNum.Value;
+        bool letters = false;
+
+        for (int i = 0; i < id.Length; i++)
+        {
+            if (id[i] >= 'a' && id[i] <= 'z' || id[i] >= 'A' && id[i] <= 'Z')
+                letters = true;
+        }
+
+        if (id.Length != 9 || letters)
+        {
+            RegistrationResult.InnerText += "Incorrect id";
+            return false;
+        }
 
         return true;
     }
 
     private bool Phone_Validation()
     {
-        // === משימה לתלמיד: וידוא מספר טלפון ===
-        // 1. ודא שאורך מספר הטלפון הוא בדיוק 10 תווים
-        // 2. ודא שהתו הראשון במספר הוא הספרה אפס
-        // 3. ודא שכל התווים במחרוזת הם ספרות בלבד
-        // 4. במקרה שאחד מהתנאים לא מתקיים, עדכן את:
-        // RegistrationResult.InnerText
-        // וסיים את הפעולה עם:
-        // return false;
+        string phonenum = phone.Value;
+        bool letters = false;
+
+        for (int i = 0; i < phonenum.Length; i++)
+        {
+            if (phonenum[i] >= 'a' && phonenum[i] <= 'z' || phonenum[i] >= 'A' && phonenum[i] <= 'Z')
+                letters = true;
+        }
+
+        if (phonenum.Length != 10 || letters || phonenum[0] != 0)
+        {
+            RegistrationResult.InnerText += "Incorrect phone number";
+            return false;
+        }
 
         return true;
     }
 
     private bool Email_Validation()
     {
-        // === משימה לתלמיד: וידוא כתובת אימייל בסיסית ===
-        // ודא שהתנאים הבאים מתקיימים:
-        // 1. המחרוזת מכילה את התו שטרודל
-        // 2. המחרוזת מכילה את התו נקודה
-        // 3. הנקודה מופיעה אחרי השטרודל
-        // רמז: כדי למצוא את המיקום של התווים, חפש ברשת איך להשתמש בפעולה:
-        // IndexOf
-        // במקרה שאחד התנאים לא מתקיים, הוסף הודעת שגיאה מתאימה והחזר:
-        // return false;
+        string email = mail.Value;
+        bool valid;
 
-        return true;
+        int @ind = 0;
+        int dotind = 0;
+        int @amnt = 0;
+
+        for (int i = 0; i < email.Length; i++)
+        {
+            
+            if (email[i] == '@')
+            {
+                @ind = i;
+                @amnt++;
+            }
+
+            if (email[i] == '.')
+            {
+                dotind = i;
+            }
+        }
+
+        if (@amnt != 1 || dotind < @ind)
+            {
+            RegistrationResult.InnerText += "Incorrect email";
+            return false;
+            }
+
+            return true;
     }
 
     private bool Approval_Validation()
