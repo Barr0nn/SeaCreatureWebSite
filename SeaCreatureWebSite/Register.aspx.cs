@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -144,15 +146,18 @@ public partial class Register : System.Web.UI.Page
     private bool Phone_Validation()
     {
         string phonenum = phone.Value;
-        bool letters = false;
 
+        if (phonenum.Length != 10)
+        {
+            RegistrationResult.InnerText += "Number should have 10 digits";
+        }
         for (int i = 0; i < phonenum.Length; i++)
         {
             if (phonenum[i] >= 'a' && phonenum[i] <= 'z' || phonenum[i] >= 'A' && phonenum[i] <= 'Z')
-                letters = true;
+                RegistrationResult.InnerText += "Number should not contain letters";
         }
 
-        if (phonenum.Length != 10 || letters || phonenum[0] != 0)
+        if (phonenum[0] != '0')
         {
             RegistrationResult.InnerText += "Incorrect phone number";
             return false;
@@ -207,8 +212,34 @@ public partial class Register : System.Web.UI.Page
 
     private bool Insert_Into_Database()
     {
+        string dbPath = this.MapPath("App_Data/Database.mdf");
+        DAL dal = new DAL(dbPath);
+
+        string sqlQuery = "SELECT * FROM Users WHERE user_name = '" + userName.Value + "'";
+        DataTable dt = dal.GetDataTable(sqlQuery);
+
+        if (dt.Rows.Count > 0)
+        {
+            RegistrationResult.InnerText = "שם משתמש קיים במערכת. אנא בחר.י שם אחר.";
+            return false;
+        }
+
+        sqlQuery = "INSERT INTO Users VALUES (" +
+        "'" + firstName.Value + "', " +
+        "'" + lastName.Value + "', " +
+        "'" + userName.Value + "', " +
+        "'" + pswd.Value + "', " +
+        "'" + idNum.Value + "'," +
+        "'" + phone.Value + "'," +
+        "'" + mail.Value + "'," +
+        "'" + Request.Form["gender"] + "'," +
+        "'" + DateTime.Now.ToString("yyyy-MM-dd") + "', 0);";
+
+        dal.UpdateDB(sqlQuery);
+
         return true;
     }
+
 
 
 

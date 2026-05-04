@@ -28,7 +28,7 @@
 		<aside>
 				<nav class="main_nav">   	
 	              <button class="Navbar" onclick="window.location.href='../default.aspx'"><a href="Default.aspx">About SeaCreature</a></button>
-	              <button class="Navbar" onclick="window.location.href='../XeroProj.aspx'"><a href="XeroProj.aspx">The Xero Project</a></button>				
+	              <button class="Navbar" onclick="window.location.href='../XeroProj.aspx'"><a href="XeroProj.aspx" id="Xero" runat="server">The Xero Project</a></button>				
                 </nav>
 		</aside>
 			

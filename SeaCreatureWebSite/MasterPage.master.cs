@@ -20,6 +20,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
             LoginLogout.InnerText = "Log in";
         }
 
+        if ((bool)Session["isLoggedIn"])
+        {
+            Xero.Visible = true;
+        }
+        else
+        {
+            Xero.Visible = false;
+        }
+
         if (!IsPostBack)
         {
             
