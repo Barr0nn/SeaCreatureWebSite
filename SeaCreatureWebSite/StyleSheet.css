@@ -183,3 +183,12 @@ footer {
 .login-form input[type="submit"]:hover {
     background-color: var(--ocean-shallow);
 }
+
+.adminTable tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.adminTable, .adminTable th, .adminTable td {
+    border: 1px solid black;
+}
+

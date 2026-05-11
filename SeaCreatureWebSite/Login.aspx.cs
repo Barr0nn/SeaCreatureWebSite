@@ -19,8 +19,14 @@ public partial class Login : System.Web.UI.Page
                 Session["userName"] = Request.Form["userName"];
                 Session["isLoggedIn"] = true;
 
+                if (result == 2)
+                    Session["isAdmin"] = true;
+
                 Response.Redirect("Default.aspx");
             }
+
+            
+
             else
             {
                 LoginResult.InnerText = "Incorrect.";
@@ -42,6 +48,11 @@ public partial class Login : System.Web.UI.Page
 
         if (dt.Rows.Count == 1)
         {
+            DataRow row = dt.Rows[0];
+
+            if ((bool)row["is_admin"])
+                return 2;
+
             return 1;
         }
         else
