@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="StyleSheetTest.css" />
     <meta charset="utf-8" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -28,7 +28,8 @@
 		<aside>
 				<nav class="main_nav">   	
 	              <button class="Navbar" onclick="window.location.href='../default.aspx'"><a href="Default.aspx">About SeaCreature</a></button>
-	              <button class="Navbar" onclick="window.location.href='../XeroProj.aspx'"><a href="XeroProj.aspx" id="Xero" runat="server">The Xero Project</a></button>				
+	              <button class="Navbar" onclick="window.location.href='../XeroProj.aspx'"><a href="XeroProj.aspx">The Xero Project</a></button>
+				  <button class="Navbar" onclick="window.location.href='../SeaEngine.aspx'"><a href="SeaEngine.aspx"  id="SeaEngine" runat="server">The SeaEngine</a></button>
                 </nav>
 		</aside>
 			

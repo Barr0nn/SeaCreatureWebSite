@@ -1,0 +1,205 @@
+﻿/* =========================================
+   OCEAN THEME - MASTERPAGE COMPATIBLE
+   ========================================= */
+
+/* --- 1. Color Palette Variables --- */
+:root {
+    --ocean-deep: #0B1D3A; /* Dark depth for main bg/text */
+    --ocean-blue: #0A4275; /* Midwater blue for headers/aside */
+    --teal-wave: #14868C; /* Bright teal accents */
+    --seafoam: #A3E4D7; /* Soft highlight teal for text/links */
+    --sand: #F4E8C1; /* Warm sandy beige for content contrast */
+    --coral-accent: #FF7F50; /* Coral reef pink/orange for buttons & CTA */
+    --coral-hover: #E06031; /* Darker coral for hover effects */
+    --whitecap: #FFFFFF; /* Clean white for crisp readability */
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Georgia', serif;
+}
+
+/* --- 2. Base Reset & Layout --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: linear-gradient(180deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
+    color: var(--whitecap);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 3. Typography & Links --- */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--seafoam);
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--seafoam);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: var(--whitecap);
+    }
+
+/* --- 4. Header Setup --- */
+header {
+    background-color: rgba(11, 29, 58, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 3px solid var(--teal-wave);
+    padding: 1rem 2rem;
+}
+
+.header_date {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--seafoam);
+}
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#DayImage {
+    max-height: 60px; 
+    width: auto;
+}
+#Icon {
+    direction: ltr;
+    max-height: 200px; 
+    width: auto;
+}
+
+.login_logout {
+    background-color: transparent;
+    border: 1px solid var(--seafoam);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+    .login_logout:hover {
+        background-color: var(--seafoam);
+        color: var(--ocean-deep) !important;
+    }
+
+/* --- 5. Main Layout Structuring (.center) --- */
+.center {
+    display: flex;
+    flex: 1; /* Pushes footer to the bottom */
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Sidebar Navigation */
+aside {
+    flex: 0 0 250px;
+}
+
+.main_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Styling your <button> wrapper items */
+.Navbar {
+    background-color: rgba(20, 134, 140, 0.2); /* Subtle teal transparency */
+    border: 1px solid var(--teal-wave);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 200px
+}
+
+    .Navbar a {
+        color: var(--whitecap);
+        display: block;
+        width: 100%;
+        font-weight: 600;
+    }
+
+    .Navbar:hover {
+        background-color: var(--teal-wave);
+        transform: translateX(5px); /* Gentle wave fluid movement */
+    }
+
+        .Navbar:hover a {
+            color: var(--ocean-deep);
+        }
+
+/* Main Content Wrapper */
+main {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05); /* Slight tint for content framing */
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(163, 228, 215, 0.2);
+}
+
+/* --- 6. Footer Layout --- */
+footer {
+    background-color: var(--ocean-deep);
+    border-top: 1px solid var(--ocean-blue);
+    padding: 2rem;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.95rem;
+}
+
+    footer h2 {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+#Discord {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+footer a {
+    color: var(--coral-accent);
+    font-weight: bold;
+}
+
+    footer a:hover {
+        color: var(--coral-hover);
+        text-decoration: underline;
+    }
+
+/* --- 7. Tablet & Mobile Optimization --- */
+@media (max-width: 768px) {
+    .center {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    aside {
+        flex: none;
+        width: 100%;
+    }
+
+    .Navbar:hover {
+        transform: none; /* Turn off sideways animation on mobile */
+    }
+}

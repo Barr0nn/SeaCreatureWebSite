@@ -22,11 +22,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         if ((bool)Session["isLoggedIn"])
         {
-            Xero.Visible = true;
+            SeaEngine.Visible = true;
         }
         else
         {
-            Xero.Visible = false;
+            SeaEngine.Visible = false;
         }
 
         if (!IsPostBack)

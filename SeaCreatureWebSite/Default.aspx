@@ -12,9 +12,10 @@
         <h2>Bar Native</h2>
         <p>Bar is a lead game director / programmer. His current projects include Xero</p> --> 
         <h2>Our projects</h2>
-        <ul>
-            <li><a href="XeroProj.aspx">Xero</a></li>
-        </ul>
+        <nav class="main_nav">
+  <button class="Navbar" onclick="window.location.href='../XeroProj.aspx'"><a href="XeroProj.aspx">The Xero Project</a></button>
+  <button class="Navbar" onclick="window.location.href='../SeaEngine.aspx'"><a href="SeaEngine.aspx"  id="SeaEngine" runat="server">The SeaEngine</a></button>
+</nav>
     </div>
 </asp:Content>
 

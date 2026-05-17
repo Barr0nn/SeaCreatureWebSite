@@ -9,6 +9,9 @@ public partial class SeaEngine : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!(bool)Session["isLoggedIn"])
+        {
+            Response.Redirect("Unauthorized.aspx");
+        }
     }
 }
